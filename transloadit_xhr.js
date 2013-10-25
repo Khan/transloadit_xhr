@@ -13,6 +13,7 @@
 
     TransloaditXhr.prototype.checkAssemblyStatus = function(assemblyUrl) {
         var self = this;
+        assemblyUrl = assemblyUrl.replace(/^http:/, 'https:');
 
         $.ajax({
             url: assemblyUrl,
