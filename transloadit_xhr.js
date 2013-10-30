@@ -16,7 +16,7 @@
         // To avoid Chrome blocking non-secure script
         assemblyUrl = assemblyUrl.replace(/^http:/, 'https:');
         // To avoid SSL certificate issue on api2.jingyi 
-        assemblyUrl = assemblyUrl.replace(/api2.[^.]*./, 'api2.');
+        assemblyUrl = assemblyUrl.replace(/api2.[^.]*.transloadit/, 'api2.transloadit');
         
         $.ajax({
             url: assemblyUrl,
