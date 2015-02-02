@@ -10,7 +10,7 @@
         this.successCb = opts.successCb || null;
         this.errorCb = opts.errorCb || null;
         // Optional steps to merge into the template
-        this.steps = opt.steps || {};
+        this.steps = opts.steps || {};
     }
 
     TransloaditXhr.prototype.checkAssemblyStatus = function(assemblyUrl) {
