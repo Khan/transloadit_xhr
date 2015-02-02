@@ -9,6 +9,8 @@
         this.templateId = opts.templateId;
         this.successCb = opts.successCb || null;
         this.errorCb = opts.errorCb || null;
+        // Optional steps to merge into the template
+        this.steps = opt.steps || {};
     }
 
     TransloaditXhr.prototype.checkAssemblyStatus = function(assemblyUrl) {
@@ -52,7 +54,8 @@
     TransloaditXhr.prototype.uploadFile = function(file) {
         var params = {
             auth: {key: this.authKey},
-            "template_id": this.templateId
+            template_id: this.templateId,
+            steps: this.steps
         };
         var self = this;
 
